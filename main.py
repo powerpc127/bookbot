@@ -16,7 +16,9 @@ def character_count(text):
     chars = {}
     text = text.replace(" ", "")
     for i in text.lower():
-        if i in chars:
+        if not i.isalpha():
+            pass
+        elif i in chars:
             chars[i] += 1
         else:
             chars[i] = 1
